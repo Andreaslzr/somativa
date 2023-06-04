@@ -1,0 +1,12 @@
+O tipo de banco de dados mais indicado é o NoSQL, pois o banco de dados NoSQL é mais flexivel do que o SQL, então como
+a demanda pede o armazenamento de qualquer arquivo o NoSQL é mais indicado, porque no SQL quando se cria a coluna da 
+tabela você tem que identificar que tipo de dados vão poder ser adicionados, e isso faria com que só alguns tipos de 
+aquivos pudessem ser armazenados no banco.
+
+script:
+
+use somativa;
+
+db.usuarios.insertMany([{nome:'Maria',arquivo1:'aaaa.txt',arquivo2:'aaaaaa.sql'},{nome:'Danilo',arquivo1:'ffff.py'}])
+
+db.usuarios.find({nome: {$regex: 'Maria'}})
